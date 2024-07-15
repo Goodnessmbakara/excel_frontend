@@ -9,9 +9,11 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-[90%] mx-auto max-w-[1440px] py-6">
+    <div className="w-[90%] mx-auto max-w-[1440px] py-6 relative">
       <div className="flex justify-between items-center uppercase">
-        <Image src={"/images/logo.png"} alt="logo" width={80} height={44} />
+        <Link href={"/"}>
+          <Image src={"/images/logo.png"} alt="logo" width={80} height={44} />
+        </Link>
         <div className="flex gap-3 text-base font-medium leading-4">
           <Nav className="hidden md:flex" />
         </div>
@@ -26,8 +28,9 @@ export default function Header() {
             onClick={() => {
               setIsOpen(!isOpen);
             }}
+            className="inline-block md:hidden"
           >
-            <MobileNav className="inline-block md:hidden" />
+            <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} className="" />
           </button>
         </div>
       </div>
