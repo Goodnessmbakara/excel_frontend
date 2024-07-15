@@ -1,4 +1,4 @@
-import { IoMdMenu, IoMdClose } from "react-icons/io";
+import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
 import Link from "next/link";
 
 export default function MobileNav({ className, isOpen, setIsOpen }) {
@@ -6,8 +6,8 @@ export default function MobileNav({ className, isOpen, setIsOpen }) {
     <div className={`${className}`}>
       {isOpen ? (
         <div>
-          <IoMdClose
-            size={24}
+          <IoCloseOutline
+            size={45}
             onClick={() => {
               setIsOpen(!isOpen);
             }}
@@ -49,7 +49,7 @@ export default function MobileNav({ className, isOpen, setIsOpen }) {
           </div>
         </div>
       ) : (
-        <IoMdMenu size={24} />
+        <IoMenuOutline size={45} />
       )}
     </div>
   );
