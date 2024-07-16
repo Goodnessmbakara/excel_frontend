@@ -7,8 +7,8 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="w-[90%] max-w-[1440px] mx-auto py-[50px] text-base font-medium">
-      <div className="flex justify-between gap-48 items-end">
-        <p className="text-5xl tracking-[-0.48px] w-1/2 relative">
+      <div className="flex lg:flex-row flex-col justify-between items-end gap-12">
+        <p className="text-5xl tracking-[-0.48px] lg:w-1/2 relative">
           Let&rsquo;s help your create visual stories that speak{" "}
           <Link
             href={"/contact"}
@@ -18,17 +18,25 @@ export default function Footer() {
             <GoArrowUpRight className="" />
           </Link>
         </p>
-        <p className="text-[22px] font-normal tracking-[-0.22px] leading-[22.66px] w-1/4">
+        <p className="text-[22px] lg:text-left font-normal tracking-[-0.22px] leading-[22.66px] lg:w-1/4 lg:ml-0 ml-20">
           31 itiam street off NEPA Line, Uyo Itam, Akwa Ibom, Nigeria 520261
         </p>
       </div>
       <div className="bg-black h-[1px] w-full mt-4 mb-8"></div>
-      <div className="flex justify-between items-center">
+      <div className="flex lg:flex-row flex-col gap-10 justify-between items-center">
         <div className="flex items-center gap-6">
-          <FaSquareInstagram size={32} />
-          <FaFacebook size={32} />
-          <IoMail size={35} />
-          <FaPinterest size={32} />
+          <Link href={""}>
+            <FaSquareInstagram size={32} />
+          </Link>
+          <Link href={""}>
+            <FaFacebook size={32} />
+          </Link>
+          <Link href={""}>
+            <IoMail size={35} />
+          </Link>
+          <Link href={""}>
+            <FaPinterest size={32} />
+          </Link>
         </div>
         <Nav />
         <p className="uppercase">Copyright excel imagery 2023</p>
