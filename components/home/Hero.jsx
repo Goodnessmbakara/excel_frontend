@@ -29,7 +29,7 @@ export default function Hero() {
             <span className="pr-3">03</span>portraits
           </li>
           <li>
-            <span className="pr-3">04</span>Maternity
+            <span className="pr-3">04</span>Maternity shoots
           </li>
           <li>
             <span className="pr-3">05</span>Products
