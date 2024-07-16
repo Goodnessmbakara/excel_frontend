@@ -12,7 +12,7 @@ export default function MobileNav({ className, isOpen, setIsOpen }) {
               setIsOpen(!isOpen);
             }}
           />
-          <div className="absolute top-full left-0 right-0 z-30 py-8 w-screen flex flex-col items-center gap-8 text-base font-medium uppercase shadow-sm">
+          <div className="absolute top-full left-0 right-0 z-30 py-8 w-screen flex flex-col items-center gap-8 bg-white text-base font-medium uppercase shadow-sm">
             <Link
               href={"/service"}
               onClick={() => {

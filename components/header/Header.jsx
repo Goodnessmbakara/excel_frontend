@@ -10,18 +10,18 @@ export default function Header() {
 
   return (
     <div className="relative">
-      <div className="w-[90%] mx-auto max-w-[1440px] border-b-[1px]  md:py-6 py-3 ">
+      <div className="w-[90%] mx-auto max-w-[1440px] border-b-[1px]  md:py-4 py-3 ">
         <div className="flex justify-between items-center uppercase">
           <Link href={"/"}>
             <Image src={"/images/logo.png"} alt="logo" width={80} height={44} />
           </Link>
-          <div className="flex gap-3 text-base font-medium leading-4">
+          <div className="flex gap-3 text-base font-medium">
             <Nav className="hidden md:flex" />
           </div>
           <div className="flex items-center gap-4">
             <Link
               href={"/contact"}
-              className="hidden md:inline-block border-[1px] border-black rounded-full px-4 py-3 text-base font-medium leading-4 uppercase"
+              className="hidden md:inline-block border-[1px] border-black rounded-full px-4 py-3 text-base font-medium uppercase"
             >
               Contact us
             </Link>

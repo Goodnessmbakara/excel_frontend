@@ -8,10 +8,11 @@ export default function Home() {
   return (
     <div className="">
       <Hero />
+      {/*
       <Showcase />
       <AboutSection />
       <Collection />
-      <Videography />
+      <Videography /> */}
     </div>
   );
 }

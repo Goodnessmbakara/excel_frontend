@@ -4,11 +4,11 @@ import HeroImage from "./HeroImage";
 
 export default function Hero() {
   return (
-    <div className="min-h-[calc(100vh-103px)] h-fit flex xl:flex-row flex-col gap-11 pb-32 w-[90%] max-w-[1440px] mx-auto">
-      <div className="flex flex-col justify-between gap-28 xl:w-[45%] w-full">
+    <div className="h-[calc(100vh-83px)] flex lg:flex-row flex-col gap-11 py-10 w-[90%] max-w-[1440px] mx-auto">
+      <div className="flex flex-col justify-between lg:w-[45%] w-full">
         <div>
-          <h1 className="text-[#111] font-normal italic text-[88px] uppercase tracking-[1.74px] leading-[84px]">
-            Capturing <span className="font-medium">Beautiful Moments</span>
+          <h1 className="text-[#111] font-normal italic text-7xl uppercase">
+            Capturing Beautiful Moments
           </h1>
           <div className="bg-black h-[5px] w-[243px] mb-10 mt-2"></div>
           <Link
@@ -18,7 +18,7 @@ export default function Hero() {
             BOOK A SESSION TODAY!
           </Link>
         </div>
-        <ul className="uppercase text-base italic">
+        <ul className="flex flex-col gap-2 uppercase text-base italic">
           <li>
             <span className="pr-3">01</span>Weddings
           </li>
@@ -36,7 +36,7 @@ export default function Hero() {
           </li>
         </ul>
       </div>
-      <HeroImage className={"hidden xl:block"} />
+      <HeroImage className={"lg:w-1/2"} />
     </div>
   );
 }
