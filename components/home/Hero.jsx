@@ -4,7 +4,7 @@ import HeroImage from "./HeroImage";
 
 export default function Hero() {
   return (
-    <div className="min-h-[calc(100vh-103px)] h-fit flex xl:flex-row flex-col gap-11 pb-10">
+    <div className="min-h-[calc(100vh-103px)] h-fit flex xl:flex-row flex-col gap-11 pb-32 w-[90%] max-w-[1440px] mx-auto">
       <div className="flex flex-col justify-between gap-28 xl:w-[45%] w-full">
         <div>
           <h1 className="text-[#111] font-normal italic text-[88px] uppercase tracking-[1.74px] leading-[84px]">

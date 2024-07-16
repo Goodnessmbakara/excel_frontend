@@ -1,9 +1,11 @@
 import Hero from "./Hero";
+import Showcase from "./Showcase";
 
 export default function Home() {
   return (
-    <div className="w-[90%] max-w-[1440px] mx-auto">
+    <div className="">
       <Hero />
+      <Showcase />
     </div>
   );
 }
