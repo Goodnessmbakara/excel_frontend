@@ -20,7 +20,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <Link
             href={"/contact"}
-            className="hidden md:inline-block border-[1px] border-black rounded-[60px] px-4 py-3 text-base font-medium leading-4 uppercase"
+            className="hidden md:inline-block border-[1px] border-black rounded-full px-4 py-3 text-base font-medium leading-4 uppercase"
           >
             Contact us
           </Link>

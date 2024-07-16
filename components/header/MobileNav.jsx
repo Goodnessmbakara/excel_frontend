@@ -18,7 +18,7 @@ export default function MobileNav({ className, isOpen, setIsOpen }) {
                 setIsOpen(!isOpen);
               }}
               href={"/contact"}
-              className="w-fit border-[1px] border-black rounded-[60px] px-4 py-3 text-base font-medium leading-4 uppercase"
+              className="w-fit border-[1px] border-black rounded-full px-4 py-3 text-base font-medium leading-4 uppercase"
             >
               Contact us
             </Link>
