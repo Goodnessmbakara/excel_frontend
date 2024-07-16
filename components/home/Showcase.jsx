@@ -7,7 +7,7 @@ export default function Showcase() {
         With our expert Photography & Cinematography, we ensure your special
         moments are preserved specially for years to come.
       </p>
-      <div className="w-full grid grid-flow-col gap-4">
+      <div className="w-full grid grid-flow-col overflow-x-auto scrollbar-hide gap-4">
         <div className="flex flex-col gap-4">
           <Image
             src={"/images/showcase/wedding.png"}
