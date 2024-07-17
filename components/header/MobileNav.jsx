@@ -12,16 +12,7 @@ export default function MobileNav({ className, isOpen, setIsOpen }) {
               setIsOpen(!isOpen);
             }}
           />
-          <div className="absolute inset-0 top-full z-30 py-4 w-screen bg-white flex flex-col items-center gap-12 text-base font-medium leading-4 uppercase">
-            <Link
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-              href={"/contact"}
-              className="w-fit border-[1px] border-black rounded-full px-4 py-3 text-base font-medium leading-4 uppercase"
-            >
-              Contact us
-            </Link>
+          <div className="absolute top-full left-0 right-0 z-30 py-8 w-screen flex flex-col items-center gap-8 bg-white text-base font-medium uppercase shadow-sm">
             <Link
               href={"/service"}
               onClick={() => {
@@ -45,6 +36,15 @@ export default function MobileNav({ className, isOpen, setIsOpen }) {
               }}
             >
               About us
+            </Link>
+            <Link
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+              href={"/contact"}
+              className="w-fit border-[1px] border-black rounded-full px-4 py-3 text-base font-medium uppercase"
+            >
+              Contact us
             </Link>
           </div>
         </div>
