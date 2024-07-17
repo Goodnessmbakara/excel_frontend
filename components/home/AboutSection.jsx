@@ -5,13 +5,13 @@ export default function AboutSection() {
   return (
     <div className="bg-black py-14 text-white">
       <div className="max-w-[1440px] w-[90%] mx-auto">
-        <div className="xl:flex justify-between relative">
-          <div className="relative">
-            <p className="font-medium text-[64px]">
+        <div className="flex md:flex-row flex-col gap-8 justify-between">
+          <div className="flex flex-col gap-4 max-w-lg">
+            <p className="font-medium lg:text-6xl text-6xl break-words text-left">
               AWARD WINNING PHOTOGRAPHER{" "}
             </p>
-            <div className="flex flex-col gap-4 max-w-[320px] w-full absolute right-0">
-              <p className="text-xl text-justify">
+            <div className="flex flex-col gap-4 max-w-[320px] w-full ml-auto">
+              <p className="lg:text-xl  text-justify">
                 Lorem ipsum dolor sit amet consectetur. Elementum quis aenean
                 ultrices suspendisse justo nunc nullam. Quam ultrices viverra
                 dui quam pretium malesuada. Risus ullamcorper sed quis aliquam
@@ -19,7 +19,7 @@ export default function AboutSection() {
               </p>
               <Link
                 href={"/about"}
-                className="p-6 border-[1px] border-white rounded-full w-fit"
+                className="lg:p-6 p-4 border-[1px] border-white rounded-full w-fit"
               >
                 ABOUT US
               </Link>
@@ -30,7 +30,8 @@ export default function AboutSection() {
             alt="Excel picture"
             width={649}
             height={532}
-            className="w-1/2"
+            className="lg:w-1/2"
+            objectFit="cover"
           />
         </div>
       </div>

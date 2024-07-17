@@ -9,8 +9,8 @@ export default function Home() {
     <div className="">
       <Hero />
       <Showcase />
-      {/*
       <AboutSection />
+      {/*
       <Collection />
       <Videography /> */}
     </div>
