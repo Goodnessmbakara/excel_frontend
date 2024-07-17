@@ -1,6 +1,6 @@
 export default function Story() {
   return (
-    <div className="md:w-[80%] w-[90%] mx-auto md:pb-20 pb-10">
+    <div className="md:w-[80%] w-[90%] mx-auto pb-10">
       <h2 className="font-medium text-4xl md:text-left text-center pb-6">
         OUR STORY
       </h2>

@@ -12,7 +12,7 @@ export default function Hero() {
           </h1>
           <div className="bg-black md:h-[5px] h-[2px] w-[243px] mb-10 mt-2"></div>
           <Link
-            href={"/contact"}
+            href={"/service/#services"}
             className="text-white bg-black py-6 px-12 rounded-full"
           >
             BOOK A SESSION TODAY!
