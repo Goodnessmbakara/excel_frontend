@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <div className="bg-black py-14 text-white">
+    <div className="bg-black py-10 text-white">
       <div className="max-w-[1440px] w-[90%] mx-auto">
-        <div className="flex md:flex-row flex-col gap-8 justify-between">
+        <div className="flex lg:flex-row flex-col gap-8 justify-between">
           <div className="flex flex-col gap-4 max-w-lg">
             <p className="font-medium lg:text-6xl text-6xl break-words text-left">
               AWARD WINNING PHOTOGRAPHER{" "}
             </p>
-            <div className="flex flex-col gap-4 max-w-[320px] w-full ml-auto">
+            <div className="flex flex-col gap-4 lg:max-w-[320px] w-full ml-auto">
               <p className="lg:text-xl  text-justify">
                 Lorem ipsum dolor sit amet consectetur. Elementum quis aenean
                 ultrices suspendisse justo nunc nullam. Quam ultrices viverra
