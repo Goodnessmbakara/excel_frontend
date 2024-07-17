@@ -1,6 +1,7 @@
 import React from "react";
 import Story from "./Story";
 import Image from "next/image";
+import Values from "./Values";
 
 export default function About() {
   return (
@@ -25,6 +26,7 @@ export default function About() {
         />
       </div>
       <Story />
+      <Values />
     </div>
   );
 }
