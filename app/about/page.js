@@ -1,9 +1,9 @@
-import Service from "@/components/service/Service";
+import About from "@/components/about/About";
 
 export default function page() {
   return (
     <div className="min-h-screen">
-      <Service />
+      <About />
     </div>
   );
 }
