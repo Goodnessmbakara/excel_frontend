@@ -25,18 +25,18 @@ export default function Footer() {
       </div>
       <div className="bg-black h-[1px] w-full mt-4 mb-8"></div>
       <div className="flex lg:flex-row flex-col lg:gap-8 gap-4 justify-between items-center">
-        <div className="flex items-center gap-6">
+        <div className="flex items-center justify-between gap-4 ">
           <Link href={""}>
-            <FaSquareInstagram size={32} />
+            <FaSquareInstagram className="lg:size-8 size-6" />
           </Link>
           <Link href={""}>
-            <FaFacebook size={32} />
+            <FaFacebook className="lg:size-8 size-6" />
           </Link>
           <Link href={""}>
-            <IoMail size={35} />
+            <IoMail className="lg:size-8 size-6" />
           </Link>
           <Link href={""}>
-            <FaPinterest size={32} />
+            <FaPinterest className="lg:size-8 size-6" />
           </Link>
         </div>
         <Nav />
