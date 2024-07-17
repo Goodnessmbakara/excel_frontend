@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroImage({ className }) {
   return (
-    <div className={`relative h-screen mx-auto ${className}`}>
+    <div className={`relative h-[calc(100vh-83px)] ${className}`}>
       <div className="z-10 absolute right-[25%]">
         <Image
           src={"/images/hero-2.png"}
@@ -12,7 +12,7 @@ export default function HeroImage({ className }) {
         />
       </div>
       <p className="uppercase absolute right-0 top-[10%] rounded-full pl-2 z-20 italic font-medium leading-[17.78px] w-[25%]">
-        Award winning <br /> photographer
+        Award winning photographer
       </p>
       <div className="z-20 absolute top-[25%] left-[25%]">
         <div className="">

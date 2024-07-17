@@ -4,7 +4,7 @@ import Footer from "@/components/footer/Footer";
 
 export const metadata = {
   title: "Excel Imagary",
-  description: "Capturing Memories",
+  description: "Capturing Beautiful Moments",
 };
 
 export default function RootLayout({ children }) {
