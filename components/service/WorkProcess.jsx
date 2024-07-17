@@ -1,22 +1,20 @@
-import { RiContactsBook2Line } from "react-icons/ri";
-import { SlPeople } from "react-icons/sl";
-import { IoSettingsOutline } from "react-icons/io5";
 import Image from "next/image";
 
 export default function WorkProcess() {
   return (
-    <div className="bg-black text-white py-20">
-      <div className="w-[90%] max-w-[1440px] mx-auto flex flex-col gap-20 justify-center items-center">
+    <div className="bg-black text-white py-16">
+      <div className="w-[90%] max-w-[1440px] mx-auto flex flex-col gap-14 justify-center items-center">
         <h2 className="font-medium text-4xl">Our Work Process</h2>
-        <div className="flex justify-between items-center">
+        <div className="flex md:flex-row flex-col justify-between xl:gap-0 gap-6 items-center text-center">
           <div className="flex flex-col items-center justify-between gap-4">
             <Image
               src={"/images/icons/book.svg"}
               alt="booking icon"
               width={88}
               height={88}
+              className="xl:size-[88px] md:size-16 size-20"
             />
-            <p className="font-medium text-base">
+            <p className="font-medium xl:text-base text-sm">
               Online Booking & Initial Inquiry
             </p>
           </div>
@@ -25,7 +23,26 @@ export default function WorkProcess() {
             alt="arrow"
             width={130}
             height={0}
-            className="pb-8"
+            className="pb-8 xl:block hidden"
+          />
+          <div className="flex flex-col items-center justify-between gap-4">
+            <Image
+              src={"/images/icons/people.svg"}
+              alt="people icon"
+              width={88}
+              height={88}
+              className="xl:size-[88px] md:size-16 size-20"
+            />
+            <p className="font-medium xl:text-base text-sm">
+              Client Consultation & Planning
+            </p>
+          </div>
+          <Image
+            src={"/images/arrow.svg"}
+            alt="arrow"
+            width={130}
+            height={0}
+            className="pb-8 xl:block hidden"
           />
           <div className="flex flex-col items-center justify-between gap-4">
             <Image
@@ -33,15 +50,18 @@ export default function WorkProcess() {
               alt="setup icon"
               width={88}
               height={88}
+              className="xl:size-[88px] md:size-16 size-20"
             />
-            <p className="font-medium text-base">Preparation & Setup</p>
+            <p className="font-medium xl:text-base text-sm">
+              Preparation & Setup
+            </p>
           </div>
           <Image
             src={"/images/arrow.svg"}
             alt="arrow"
             width={130}
             height={0}
-            className="pb-8"
+            className="pb-8 xl:block hidden"
           />
           <div className="flex flex-col items-center justify-between gap-4">
             <Image
@@ -49,15 +69,18 @@ export default function WorkProcess() {
               alt="camera icon"
               width={88}
               height={88}
+              className="xl:size-[88px] md:size-16 size-20"
             />
-            <p className="font-medium text-base">Photoshoot Exection</p>
+            <p className="font-medium xl:text-base text-sm">
+              Photoshoot Exection
+            </p>
           </div>
           <Image
             src={"/images/arrow.svg"}
             alt="arrow"
             width={130}
             height={0}
-            className="pb-8"
+            className="pb-8 xl:block hidden"
           />
           <div className="flex flex-col items-center justify-between gap-4">
             <Image
@@ -65,8 +88,9 @@ export default function WorkProcess() {
               alt="edit icon"
               width={88}
               height={88}
+              className="xl:size-[88px] md:size-16 size-20"
             />
-            <p className="font-medium text-base">
+            <p className="font-medium xl:text-base text-sm">
               Editing, Delivery & Follow-up
             </p>
           </div>
