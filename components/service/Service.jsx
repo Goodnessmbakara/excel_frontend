@@ -1,3 +1,5 @@
+import WorkProcess from "./WorkProcess";
+
 export default function Service() {
   return (
     <div>
@@ -9,6 +11,7 @@ export default function Service() {
           malesuada.
         </p>
       </div>
+      <WorkProcess />
     </div>
   );
 }
