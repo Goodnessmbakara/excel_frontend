@@ -2,7 +2,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 export default function ServiceList() {
   return (
-    <div className="w-[90%] max-w-[1440px] mx-auto py-10">
+    <div id="services" className="w-[90%] max-w-[1440px] mx-auto py-10">
       <h2 className="font-medium text-4xl pb-4">A List of Our Services</h2>
       <p className="lg:text-lg text-base font-normal text-justify leading-5 pb-8">
         Lorem ipsum dolor sit amet consectetur. Elementum quis aenean ultrices
