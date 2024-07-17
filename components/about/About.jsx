@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <div>
-      <div className="w-[90%] max-w-[1440px] mx-auto pb-20">
+      <div className="w-[90%] max-w-[1440px] mx-auto md:pb-20 pb-10">
         <div className="flex md:flex-row flex-col justify-between items-center gap-10 pt-10 pb-6">
           <h1 className="lg:text-7xl text-5xl font-medium text-nowrap">
             ABOUT US
@@ -21,7 +21,7 @@ export default function About() {
           alt="hero-image"
           width={1440}
           height={322}
-          className="md:visible invisible"
+          className="md:block hidden"
         />
       </div>
       <Story />
