@@ -11,8 +11,7 @@ export default function Home() {
       <Showcase />
       <AboutSection />
       <Collection />
-      {/*
-      <Videography /> */}
+      <Videography />
     </div>
   );
 }
