@@ -12,7 +12,7 @@ export default function Nav({ className }) {
     >
       <Link
         href={"/service"}
-        className={`py-2 ${
+        className={`py-2 push-effect ${
           pathname === "/service" ? "border-b-[1px] border-black" : ""
         }`}
       >
@@ -20,7 +20,7 @@ export default function Nav({ className }) {
       </Link>
       <Link
         href={"/gallery"}
-        className={`py-2 ${
+        className={`py-2 push-effect ${
           pathname === "/gallery" ? "border-b-[1px] border-black" : ""
         }`}
       >
@@ -28,7 +28,7 @@ export default function Nav({ className }) {
       </Link>
       <Link
         href={"/about"}
-        className={`py-2 ${
+        className={`py-2 push-effect ${
           pathname === "/about" ? "border-b-[1px] border-black" : ""
         }`}
       >

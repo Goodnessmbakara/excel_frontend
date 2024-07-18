@@ -43,7 +43,7 @@ export default function ContactForm() {
       </div>
       <button
         type="button"
-        className="bg-black hover:opacity-50 text-white rounded-full max-w-64 py-6 mt-6"
+        className="bg-black push-effect hover:opacity-90 text-white rounded-full max-w-64 py-6 mt-6"
       >
         SEND MESSAGE
       </button>

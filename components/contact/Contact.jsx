@@ -36,16 +36,16 @@ export default function Contact() {
           </div>
           <div className="flex gap-6 items-center">
             <Link href={""}>
-              <FaSquareInstagram className="size-8" />
+              <FaSquareInstagram className="size-8 push-effect hover:opacity-90" />
             </Link>
             <Link href={""}>
-              <FaFacebook className="size-8" />
+              <FaFacebook className="size-8 push-effect hover:opacity-90" />
             </Link>
             <Link href={""}>
-              <IoMail className="size-8" />
+              <IoMail className="size-8 push-effect hover:opacity-90" />
             </Link>
             <Link href={""}>
-              <FaPinterest className="size-8" />
+              <FaPinterest className="size-8 push-effect hover:opacity-90" />
             </Link>
           </div>
         </div>

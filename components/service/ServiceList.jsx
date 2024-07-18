@@ -11,7 +11,7 @@ export default function ServiceList() {
       </p>
       <div>
         <div className="md:py-6 py-4 border-b-[1px] border-t-[1px] border-black">
-          <div className="flex items-center justify-between cursor-pointer">
+          <div className="flex items-center justify-between cursor-pointer push-effect">
             <div>
               <p className="md:text-3xl text-xl font-medium">WEDDING BOOKING</p>
               <p className="md:text-base text-sm">
@@ -22,7 +22,7 @@ export default function ServiceList() {
           </div>
         </div>
         <div className="md:py-6 py-4 border-b-[1px] border-black">
-          <div className="flex items-center justify-between cursor-pointer">
+          <div className="flex items-center justify-between cursor-pointer push-effect">
             <div>
               <p className="md:text-3xl text-xl font-medium">EVENT BOOKING</p>
               <p className="md:text-base text-sm">
@@ -33,7 +33,7 @@ export default function ServiceList() {
           </div>
         </div>
         <div className="md:py-6 py-4 border-b-[1px] border-black">
-          <div className="flex items-center justify-between cursor-pointer">
+          <div className="flex items-center justify-between cursor-pointer push-effect">
             <div>
               <p className="md:text-3xl text-xl font-medium">
                 {" "}
@@ -47,7 +47,7 @@ export default function ServiceList() {
           </div>
         </div>
         <div className="py-8 border-b-[1px] border-black">
-          <div className="flex items-center justify-between cursor-pointer">
+          <div className="flex items-center justify-between cursor-pointer push-effect">
             <div>
               <p className="md:text-3xl text-xl font-medium">
                 PORTRAITS BOOKING
@@ -60,7 +60,7 @@ export default function ServiceList() {
           </div>
         </div>
         <div className="md:py-6 py-4 border-b-[1px] border-black">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between cursor-pointer push-effect">
             <div>
               <p className="md:text-3xl text-xl font-medium">
                 MATERNITY BOOKING
@@ -73,7 +73,7 @@ export default function ServiceList() {
           </div>
         </div>
         <div className="md:py-6 py-4 border-b-[1px] border-black">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between cursor-pointer push-effect">
             <div>
               <p className="md:text-3xl text-xl font-medium">
                 PRODUCTS BOOKING

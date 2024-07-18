@@ -10,7 +10,7 @@ export default function Nav() {
       <div className="flex md:justify-center gap-4 px-4 text-[#0000007F] font-medium lg:text-xl text-lg overflow-x-auto snap-mandatory">
         <Link
           href={"/gallery"}
-          className={`py-2 snap-center ${
+          className={`py-2 snap-center push-effect ${
             pathname === "/gallery"
               ? "text-black border-b-[2px] border-b-black"
               : ""
@@ -20,7 +20,7 @@ export default function Nav() {
         </Link>
         <Link
           href={"/gallery/birthday"}
-          className={`py-2 snap-center ${
+          className={`py-2 snap-center push-effect ${
             pathname === "/gallery/birthday"
               ? "text-black border-b-[1px] border-b-black"
               : ""
@@ -30,7 +30,7 @@ export default function Nav() {
         </Link>
         <Link
           href={"/gallery/events"}
-          className={`py-2 snap-center ${
+          className={`py-2 snap-center push-effect ${
             pathname === "/gallery/events"
               ? "text-black  border-b-[1px] border-b-black"
               : ""
@@ -40,7 +40,7 @@ export default function Nav() {
         </Link>
         <Link
           href={"/gallery/maternity"}
-          className={`py-2 snap-center ${
+          className={`py-2 snap-center push-effect ${
             pathname === "/gallery/maternity"
               ? "text-black border-b-[1px] border-b-black"
               : ""
@@ -50,7 +50,7 @@ export default function Nav() {
         </Link>
         <Link
           href={"/gallery/products"}
-          className={`py-2 snap-center ${
+          className={`py-2 snap-center push-effect ${
             pathname === "/gallery/products"
               ? "text-black border-b-[1px] border-b-black"
               : ""
@@ -60,7 +60,7 @@ export default function Nav() {
         </Link>
         <Link
           href={"/gallery/cinematography"}
-          className={`py-2 snap-center ${
+          className={`py-2 snap-center push-effect ${
             pathname === "/gallery/cinematography"
               ? "text-black border-b-[1px] border-b-black"
               : ""
