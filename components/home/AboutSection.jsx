@@ -19,7 +19,7 @@ export default function AboutSection() {
               </p>
               <Link
                 href={"/about"}
-                className="lg:p-6 p-4 border-[1px] border-white rounded-full w-fit"
+                className="lg:p-6 p-4 border-[1px] border-white rounded-full w-fit push-effect hover:opacity-90"
               >
                 ABOUT US
               </Link>

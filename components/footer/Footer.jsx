@@ -13,7 +13,7 @@ export default function Footer() {
           <br className="md:hidden block" />
           <Link
             href={"/contact"}
-            className="absolute lg:text-base text-sm border-[1px] border-black w-fit lg:px-6 px-4 lg:py-3 py-2 leading-tight rounded-full inline-flex items-center ml-2 gap-2 whitespace-nowrap"
+            className="absolute lg:text-base text-sm border-[1px] border-black w-fit lg:px-6 px-4 lg:py-3 py-2 leading-tight rounded-full inline-flex items-center ml-2 gap-2 whitespace-nowrap push-effect"
           >
             <span className="">LET&rsquo;S TALK</span>
             <GoArrowUpRight className="" />
@@ -27,16 +27,16 @@ export default function Footer() {
       <div className="flex lg:flex-row flex-col lg:gap-8 gap-4 justify-between items-center">
         <div className="flex items-center justify-between gap-4 ">
           <Link href={""}>
-            <FaSquareInstagram className="lg:size-8 size-6" />
+            <FaSquareInstagram className="lg:size-8 size-6 push-effect hover:opacity-90" />
           </Link>
           <Link href={""}>
-            <FaFacebook className="lg:size-8 size-6" />
+            <FaFacebook className="lg:size-8 size-6 push-effect hover:opacity-90" />
           </Link>
           <Link href={""}>
-            <IoMail className="lg:size-8 size-6" />
+            <IoMail className="lg:size-8 size-6 push-effect hover:opacity-90" />
           </Link>
           <Link href={""}>
-            <FaPinterest className="lg:size-8 size-6" />
+            <FaPinterest className="lg:size-8 size-6 push-effect hover:opacity-90" />
           </Link>
         </div>
         <Nav />

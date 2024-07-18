@@ -7,7 +7,7 @@ export default function Videography() {
         We deliver quality video coverage for various events
       </h2>
       <div className="bg-gray-900 max-w-xl mx-auto h-96 flex items-center justify-center">
-        <FaRegCirclePlay className="text-white text-6xl" />
+        <FaRegCirclePlay className="text-white text-6xl cursor-pointer push-effect" />
       </div>
     </div>
   );
