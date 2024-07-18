@@ -4,9 +4,11 @@ import Link from "next/link";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div className="sticky top-0 bg-white z-30">
@@ -27,7 +29,9 @@ export default function Header() {
             <div className="flex items-center gap-4">
               <Link
                 href={"/contact"}
-                className="hidden md:inline-block border-[1px] border-black rounded-full px-4 py-3 text-base font-medium uppercase"
+                className={`hidden md:inline-block border-[1px] border-black rounded-full px-4 py-3 text-base font-medium uppercase ${
+                  pathname === "/contact" ? "bg-[#111] text-white" : ""
+                }`}
               >
                 Contact us
               </Link>
