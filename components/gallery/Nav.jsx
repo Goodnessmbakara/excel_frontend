@@ -39,6 +39,16 @@ export default function Nav() {
           EVENTS
         </Link>
         <Link
+          href={"/gallery/portraits"}
+          className={`py-2 snap-center push-effect ${
+            pathname === "/gallery/portraits"
+              ? "text-black  border-b-[1px] border-b-black"
+              : ""
+          }`}
+        >
+          PORTRAITS
+        </Link>
+        <Link
           href={"/gallery/maternity"}
           className={`py-2 snap-center push-effect ${
             pathname === "/gallery/maternity"
