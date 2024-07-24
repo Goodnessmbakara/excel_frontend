@@ -1,6 +1,3 @@
-"use client";
-import { useState } from "react";
-import Popup from "../Popup";
 import { MdCancel } from "react-icons/md";
 
 export default function BookingForm({
@@ -21,11 +18,8 @@ export default function BookingForm({
       <form
         onSubmit={handleSubmit}
         onClick={(e) => e.stopPropagation()}
-        className="py-20 px-12 max-h-screen mx-auto flex md:flex-row flex-col justify-between items-center gap-16 border-[1px] border-black relative bg-white"
+        className="overflow-auto md:py-20 py-10 lg:px-12 px-6 max-h-screen mx-auto flex md:flex-row flex-col justify-between items-center lg:gap-16 gap-10 border-[1px] border-black relative bg-white"
       >
-        <button className="close-button" onClick={() => setShowForm(false)}>
-          <MdCancel className="md:size-8 size-5 absolute top-8 right-12" />
-        </button>
         <div className="">
           <h2 className="text-3xl font-medium pb-6">BOOK A SESSION TODAY!</h2>
           <div className="pb-8">
@@ -136,6 +130,9 @@ export default function BookingForm({
             className="bg-black text-white text-base font-medium py-6 rounded-full"
           >
             BOOK A SESSION
+          </button>
+          <button className="close-button" onClick={() => setShowForm(false)}>
+            <MdCancel className="md:size-8 size-5 absolute lg:top-8 top-5 lg:right-12 right-6" />
           </button>
         </div>
       </form>
