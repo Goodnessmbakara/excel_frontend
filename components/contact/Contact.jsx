@@ -23,7 +23,7 @@ export default function Contact() {
           beautiful together.
         </p>
       </div>
-      <div className="w-[90%] max-w-[1440px] mx-auto flex md:flex-row flex-col-reverse justify-between items-center gap-20">
+      <div className="w-[90%] max-w-[1440px] mx-auto flex md:flex-row flex-col-reverse justify-between items-center md:items-start gap-20">
         <div className="flex flex-col gap-10 lg:min-w-[360px]">
           <div className="flex gap-3 items-center">
             <FaPhoneAlt className="size-8" />
