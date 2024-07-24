@@ -11,11 +11,12 @@ export default function AboutSection() {
               AWARD WINNING PHOTOGRAPHER{" "}
             </p>
             <div className="flex flex-col gap-4 lg:max-w-[320px] w-full ml-auto">
-              <p className="lg:text-xl  text-justify">
-                Lorem ipsum dolor sit amet consectetur. Elementum quis aenean
-                ultrices suspendisse justo nunc nullam. Quam ultrices viverra
-                dui quam pretium malesuada. Risus ullamcorper sed quis aliquam
-                lacus rhoncus faucibus eu.
+              <p className="lg:text-xl text-justify">
+                With a keen eye for detail and a passion for capturing
+                life&apos;s most precious moments, our award-winning
+                photographer brings artistry to every shot. From stunning
+                landscapes to intimate portraits, we transform ordinary scenes
+                into extraordinary memories.
               </p>
               <Link
                 href={"/about"}

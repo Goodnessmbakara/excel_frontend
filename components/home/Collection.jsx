@@ -14,7 +14,7 @@ export default function Collection() {
             <div>
               <p className="md:text-3xl text-xl font-medium">WEDDING</p>
               <p className="md:text-base text-sm">
-                Lorem ipsum dolor sit amet consectetur. Massa sollicitudin id.
+                Capturing love stories and timeless moments on your special day.
               </p>
             </div>
             <BsArrowRight className="size-10" />
@@ -28,7 +28,7 @@ export default function Collection() {
             <div>
               <p className="md:text-3xl text-xl font-medium">EVENTS</p>
               <p className="md:text-base text-sm">
-                Lorem ipsum dolor sit amet consectetur. Massa sollicitudin id.
+                Preserving the energy and excitement of your special occasions.
               </p>
             </div>
             <BsArrowRight className="size-10" />
@@ -42,7 +42,7 @@ export default function Collection() {
             <div>
               <p className="md:text-3xl text-xl font-medium">CINEMATOGRAPHY</p>
               <p className="md:text-base text-sm">
-                Lorem ipsum dolor sit amet consectetur. Massa sollicitudin id.
+                Bringing your stories to life through dynamic video narratives.
               </p>
             </div>
             <BsArrowRight className="size-10" />
@@ -56,7 +56,8 @@ export default function Collection() {
             <div>
               <p className="md:text-3xl text-xl font-medium">PORTRAITS</p>
               <p className="md:text-base text-sm">
-                Lorem ipsum dolor sit amet consectetur. Massa sollicitudin id.
+                Showcasing your unique personality in stunning, personalized
+                shots.
               </p>
             </div>
             <BsArrowRight className="size-10" />
@@ -70,7 +71,8 @@ export default function Collection() {
             <div>
               <p className="md:text-3xl text-xl font-medium">MATERNITY</p>
               <p className="md:text-base text-sm">
-                Lorem ipsum dolor sit amet consectetur. Massa sollicitudin id.
+                Celebrating the beauty of motherhood with elegant, intimate
+                portraits.
               </p>
             </div>
             <BsArrowRight className="size-10" />
@@ -84,7 +86,7 @@ export default function Collection() {
             <div>
               <p className="md:text-3xl text-xl font-medium">PRODUCTS</p>
               <p className="md:text-base text-sm">
-                Lorem ipsum dolor sit amet consectetur. Massa sollicitudin id.
+                Showcasing your products in their best light for maximum impact.
               </p>
             </div>
             <BsArrowRight className="size-10" />

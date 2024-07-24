@@ -17,9 +17,10 @@ export default function Contact() {
           CONTACT US
         </h1>
         <p className="lg:text-lg text-base font-normal text-justify leading-5 max-w-md">
-          Lorem ipsum dolor sit amet consectetur. Elementum quis aenean ultrices
-          suspendisse justo nunc nullam. Quam ultrices viverra dui quam pretium
-          malesuada.
+          Ready to capture your special moments? We&apos;re here to bring your
+          vision to life. Reach out to us for inquiries, bookings, or just to
+          chat about your photography needs. Let&apos;s create something
+          beautiful together.
         </p>
       </div>
       <div className="w-[90%] max-w-[1440px] mx-auto flex md:flex-row flex-col-reverse justify-between items-center gap-20">
@@ -35,16 +36,16 @@ export default function Contact() {
             </span>
           </div>
           <div className="flex gap-6 items-center">
-            <Link href={""}>
+            <Link href={"https://www.instagram.com/excelphotography"}>
               <FaSquareInstagram className="size-8 push-effect hover:opacity-90" />
             </Link>
-            <Link href={""}>
+            <Link href={"https://www.facebook.com/excelphotography"}>
               <FaFacebook className="size-8 push-effect hover:opacity-90" />
             </Link>
-            <Link href={""}>
+            <Link href={"mailto:info@excelphotography.com"}>
               <IoMail className="size-8 push-effect hover:opacity-90" />
             </Link>
-            <Link href={""}>
+            <Link href={"https://www.pinterest.com/excelphotography"}>
               <FaPinterest className="size-8 push-effect hover:opacity-90" />
             </Link>
           </div>
