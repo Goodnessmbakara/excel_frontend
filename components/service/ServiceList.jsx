@@ -1,6 +1,19 @@
+"use client";
 import { BsArrowRight } from "react-icons/bs";
+import BookingForm from "./BookingForm";
+import Popup from "../Popup";
+import { useState } from "react";
 
 export default function ServiceList() {
+  const [showForm, setShowForm] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [bookingType, setBookingType] = useState("");
+
+  const handleForm = (type) => {
+    setBookingType(type);
+    setShowForm(true);
+  };
+
   return (
     <div id="services" className="w-[90%] max-w-[1440px] mx-auto py-10">
       <h2 className="font-medium text-4xl pb-4">A List of Our Services</h2>
@@ -11,7 +24,10 @@ export default function ServiceList() {
       </p>
       <div>
         <div className="md:py-6 py-4 border-b-[1px] border-t-[1px] border-black">
-          <div className="flex items-center justify-between cursor-pointer push-effect">
+          <div
+            onClick={() => handleForm("wedding booking")}
+            className="flex items-center justify-between cursor-pointer push-effect"
+          >
             <div>
               <p className="md:text-3xl text-xl font-medium">WEDDING BOOKING</p>
               <p className="md:text-base text-sm">
@@ -23,7 +39,10 @@ export default function ServiceList() {
           </div>
         </div>
         <div className="md:py-6 py-4 border-b-[1px] border-black">
-          <div className="flex items-center justify-between cursor-pointer push-effect">
+          <div
+            onClick={() => handleForm("event booking")}
+            className="flex items-center justify-between cursor-pointer push-effect"
+          >
             <div>
               <p className="md:text-3xl text-xl font-medium">EVENT BOOKING</p>
               <p className="md:text-base text-sm">
@@ -35,7 +54,10 @@ export default function ServiceList() {
           </div>
         </div>
         <div className="md:py-6 py-4 border-b-[1px] border-black">
-          <div className="flex items-center justify-between cursor-pointer push-effect">
+          <div
+            onClick={() => handleForm("birthday booking")}
+            className="flex items-center justify-between cursor-pointer push-effect"
+          >
             <div>
               <p className="md:text-3xl text-xl font-medium">
                 BIRTHDAY BOOKING
@@ -49,7 +71,10 @@ export default function ServiceList() {
           </div>
         </div>
         <div className="py-8 border-b-[1px] border-black">
-          <div className="flex items-center justify-between cursor-pointer push-effect">
+          <div
+            onClick={() => handleForm("portraits booking")}
+            className="flex items-center justify-between cursor-pointer push-effect"
+          >
             <div>
               <p className="md:text-3xl text-xl font-medium">
                 PORTRAITS BOOKING
@@ -63,7 +88,10 @@ export default function ServiceList() {
           </div>
         </div>
         <div className="md:py-6 py-4 border-b-[1px] border-black">
-          <div className="flex items-center justify-between cursor-pointer push-effect">
+          <div
+            onClick={() => handleForm("maternity booking")}
+            className="flex items-center justify-between cursor-pointer push-effect"
+          >
             <div>
               <p className="md:text-3xl text-xl font-medium">
                 MATERNITY BOOKING
@@ -77,7 +105,10 @@ export default function ServiceList() {
           </div>
         </div>
         <div className="md:py-6 py-4 border-b-[1px] border-black">
-          <div className="flex items-center justify-between cursor-pointer push-effect">
+          <div
+            onClick={() => handleForm("products booking")}
+            className="flex items-center justify-between cursor-pointer push-effect"
+          >
             <div>
               <p className="md:text-3xl text-xl font-medium">
                 PRODUCTS BOOKING
@@ -91,6 +122,21 @@ export default function ServiceList() {
           </div>
         </div>
       </div>
+      {showForm && (
+        <BookingForm
+          setShowForm={setShowForm}
+          bookingType={bookingType}
+          setShowPopup={setShowPopup}
+        />
+      )}
+      {showPopup && (
+        <Popup
+          onClose={() => setShowPopup(false)}
+          setShowPopup={setShowPopup}
+          headertext="Successfully booked"
+          text="We care about all our clients. we will get to back to you as soon as possible."
+        />
+      )}
     </div>
   );
 }
