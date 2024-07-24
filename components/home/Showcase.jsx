@@ -2,9 +2,7 @@ import Image from "next/image";
 
 export default function Showcase() {
   return (
-    <div
-      className={`flex flex-col gap-8 lg:pt-32 py-10 w-full max-w-[1440px] mx-auto`}
-    >
+    <div className={`flex flex-col gap-8 py-10 w-full max-w-[1440px] mx-auto`}>
       <p className="text-center xl:text-3xl text-xl font-normal lg:px-0 px-[10%] max-w-3xl mx-auto">
         With our expert Photography & Cinematography, we ensure your special
         moments are preserved specially for years to come.
