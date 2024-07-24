@@ -13,14 +13,15 @@ export default function About() {
             ABOUT US
           </h1>
           <p className="lg:text-lg text-base font-normal text-justify leading-5 max-w-md">
-            Lorem ipsum dolor sit amet consectetur. Elementum quis aenean
-            ultrices suspendisse justo nunc nullam. Quam ultrices viverra dui
-            quam pretium malesuada.
+            At Excel Photography, we&apos;re passionate about capturing
+            life&apos;s most precious moments. Our team of skilled photographers
+            combines artistic vision with technical expertise to create stunning
+            visual narratives that will be cherished for generations.
           </p>
         </div>
         <Image
           src={"/images/about/about-hero.png"}
-          alt="hero-image"
+          alt="Excel Photography Team"
           width={1440}
           height={322}
           className="md:block hidden"

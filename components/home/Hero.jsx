@@ -7,7 +7,7 @@ export default function Hero() {
     <div className="lg:h-[calc(100vh-83px)] flex lg:flex-row flex-col gap-10 justify-between md:py-10 py-5 w-[90%] max-w-[1440px] mx-auto">
       <div className="flex flex-col justify-between lg:gap-0 gap-8 lg:w-[45%] w-full">
         <div>
-          <h1 className="text-[#111] font-normal italic lg:text-7xl  md:text-4xl text-3xl uppercase">
+          <h1 className="text-[#111] font-normal lg:text-7xl  md:text-4xl text-3xl uppercase">
             Capturing Beautiful Moments
           </h1>
           <div className="bg-black md:h-[5px] h-[2px] w-[243px] mb-10 mt-2"></div>
