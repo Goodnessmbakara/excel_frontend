@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="lg:h-[calc(100vh-83px)] flex lg:flex-row flex-col gap-10 justify-between md:py-10 py-5 w-[90%] max-w-[1440px] mx-auto">
+    <div className="lg:h-[calc(100vh-83px)] max-h-[750px] flex lg:flex-row flex-col gap-10 justify-between md:py-10 py-5 w-[90%] max-w-[1440px] mx-auto">
       <div className="flex flex-col justify-between lg:gap-0 gap-8">
         <div>
           <h1 className="text-[#111] font-normal lg:text-7xl  md:text-4xl text-3xl uppercase">
