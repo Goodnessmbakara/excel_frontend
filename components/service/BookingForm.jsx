@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import { MdCancel } from "react-icons/md";
 
 export default function BookingForm({
@@ -5,11 +7,75 @@ export default function BookingForm({
   setShowForm,
   setShowPopup,
 }) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setShowPopup(true);
-    setShowForm(false);
+  const [formData, setFormData] = useState({
+    bookingType: `${bookingType}`,
+    fullname: "",
+    email: "",
+    phone: "",
+    message: "",
+    fullDay: false,
+    multiEvent: false,
+    drone: false,
+    photoBooth: false,
+    videography: false,
+  });
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    const { id, value, type, checked } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [id]: type === "checkbox" ? checked : value,
+    }));
   };
+
+  const isFormValid = () => {
+    return (
+      formData.fullname.trim() !== "" &&
+      formData.email.trim() !== "" &&
+      formData.phone.trim() !== ""
+    );
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    if (!isFormValid()) {
+      setError("Please fill all required fields.");
+      return;
+    }
+
+    console.log("booking form data", formData);
+
+    try {
+      const response = await fetch(
+        "https://app-07b991a0-e1c2-444c-930e-6b13cf0600d2.cleverapps.io/api/book-session/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFTOKEN":
+              "3u6hUACwwZvgrRnydD1PnfnnRUJTWdSqDQWrMiQrE0xqXlcPelDIIeLdDbtHL41C",
+          },
+          body: JSON.stringify({ ...formData, bookingType }),
+        }
+      );
+      if (response.ok) {
+        console.log("Booking request sent successfully");
+        setShowPopup(true);
+        setShowForm(false);
+      } else {
+        const errorData = await response.json();
+        console.error("Failed to send the booking request", errorData);
+        setError("Failed to send the booking request. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting the form", error);
+      setError("An error occurred. Please try again.");
+    }
+  };
+
   return (
     <div
       onClick={() => setShowForm(false)}
@@ -33,6 +99,8 @@ export default function BookingForm({
               <input
                 type="checkbox"
                 id="fullDay"
+                checked={formData.fullDay}
+                onChange={handleChange}
                 className="accent-black rounded-sm size-[18px] cursor-pointer"
               />
               <label htmlFor="fullDay" className="text-base font-normal">
@@ -43,6 +111,8 @@ export default function BookingForm({
               <input
                 type="checkbox"
                 id="multiEvent"
+                checked={formData.multiEvent}
+                onChange={handleChange}
                 className="accent-black rounded-sm size-[18px] cursor-pointer"
               />
               <label htmlFor="multiEvent" className="text-base font-normal">
@@ -53,6 +123,8 @@ export default function BookingForm({
               <input
                 type="checkbox"
                 id="drone"
+                checked={formData.drone}
+                onChange={handleChange}
                 className="accent-black rounded-sm size-[18px] cursor-pointer"
               />
               <label htmlFor="drone" className="text-base font-normal">
@@ -63,6 +135,8 @@ export default function BookingForm({
               <input
                 type="checkbox"
                 id="photoBooth"
+                checked={formData.photoBooth}
+                onChange={handleChange}
                 className="accent-black rounded-sm size-[18px] cursor-pointer"
               />
               <label htmlFor="photoBooth" className="text-base font-normal">
@@ -73,6 +147,8 @@ export default function BookingForm({
               <input
                 type="checkbox"
                 id="videography"
+                checked={formData.videography}
+                onChange={handleChange}
                 className="accent-black rounded-sm size-[18px] cursor-pointer"
               />
               <label htmlFor="videography" className="text-base font-normal">
@@ -80,7 +156,7 @@ export default function BookingForm({
               </label>
             </div>
             <p className="pt-1">
-              You can still discuss so other services during consultation.
+              You can still discuss other services during consultation.
             </p>
           </fieldset>
         </div>
@@ -92,7 +168,10 @@ export default function BookingForm({
             <input
               type="text"
               id="fullname"
+              value={formData.fullname}
+              onChange={handleChange}
               className="w-full h-6 border-b-[1px] border-b-black bg-[#F4F4F4] outline-none"
+              required
             />
           </div>
           <div>
@@ -102,7 +181,10 @@ export default function BookingForm({
             <input
               type="email"
               id="email"
+              value={formData.email}
+              onChange={handleChange}
               className="w-full h-6 border-b-[1px] border-b-black bg-[#F4F4F4] outline-none"
+              required
             />
           </div>
           <div>
@@ -112,7 +194,10 @@ export default function BookingForm({
             <input
               type="tel"
               id="phone"
+              value={formData.phone}
+              onChange={handleChange}
               className="w-full h-6 border-b-[1px] border-b-black bg-[#F4F4F4] outline-none"
+              required
             />
           </div>
           <div>
@@ -121,13 +206,19 @@ export default function BookingForm({
             </label>
             <textarea
               id="message"
+              value={formData.message}
+              onChange={handleChange}
               rows={5}
               className="w-full h-8 border-b-[1px] border-b-black bg-[#F4F4F4] outline-none"
             />
           </div>
+          {error && <p className="text-red-500">{error}</p>}
           <button
             type="submit"
-            className="bg-black text-white text-base font-medium py-6 rounded-full"
+            disabled={!isFormValid()}
+            className={`bg-black text-white text-base font-medium py-6 rounded-full ${
+              !isFormValid() ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           >
             BOOK A SESSION
           </button>
