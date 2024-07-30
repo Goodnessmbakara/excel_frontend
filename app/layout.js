@@ -9,7 +9,6 @@ export const metadata = {
   keywords:
     "photography, videography, wedding photography, portraits, events, Excel Imagary",
   author: "Excel Imagary",
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
     title: "Excel Imagary - Professional Photography and Videography",
