@@ -41,7 +41,7 @@ export default function Team() {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="flex flex-col lg:gap-4 gap-2 justify-between items-center text-center"
+            className="flex flex-col lg:gap-4 gap-2 justify-between items-center text-center uppercase"
           >
             <Image
               src={member.photo}
