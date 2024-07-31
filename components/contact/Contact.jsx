@@ -31,9 +31,10 @@ export default function Contact() {
           </div>
           <div className="flex gap-3 items-center">
             <FaLocationDot className="size-8" />
-            <span>
-              31 itiam street off NEPA Line, Uyo Itam, Akwa Ibom, Nigeria 520261
-            </span>
+            <p>
+              31 itiam street off NEPA Line, <br />
+              Uyo Itam, Akwa Ibom, Nigeria.
+            </p>
           </div>
           <div className="flex gap-6 items-center">
             <a target="_blank" href={"https://www.instagram.com/excelimagery"}>
