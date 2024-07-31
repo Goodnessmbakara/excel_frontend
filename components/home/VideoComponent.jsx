@@ -43,7 +43,7 @@ export default function VideoComponent() {
       loop
       muted
     >
-      <source src={"/hero-video.mp4"} type="video/mp4" />
+      <source src={src} type="video/mp4" />
       <track kind="subtitles" srcLang="en" label="English" />
       Your browser does not support the video tag.
     </video>
