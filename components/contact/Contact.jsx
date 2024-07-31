@@ -5,7 +5,7 @@ import {
   FaLocationDot,
   FaSquareInstagram,
   FaFacebook,
-  FaPinterest,
+  FaSquareWhatsapp,
 } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 
@@ -27,7 +27,7 @@ export default function Contact() {
         <div className="flex flex-col gap-10 lg:min-w-[360px]">
           <div className="flex gap-3 items-center">
             <FaPhoneAlt className="size-8" />
-            <span>+234595690500</span>
+            <span>+2347018087954</span>
           </div>
           <div className="flex gap-3 items-center">
             <FaLocationDot className="size-8" />
@@ -36,18 +36,18 @@ export default function Contact() {
             </span>
           </div>
           <div className="flex gap-6 items-center">
-            <Link href={"https://www.instagram.com/excelphotography"}>
+            <a target="_blank" href={"https://www.instagram.com/excelimagery"}>
               <FaSquareInstagram className="size-8 push-effect hover:opacity-90" />
-            </Link>
-            <Link href={"https://www.facebook.com/excelphotography"}>
+            </a>
+            <a target="_blank" href={"https://www.facebook.com/Excelimagery"}>
               <FaFacebook className="size-8 push-effect hover:opacity-90" />
-            </Link>
-            <Link href={"mailto:info@excelphotography.com"}>
+            </a>
+            <a target="_blank" href={"mailto:excelimagery@gmail.com"}>
               <IoMail className="size-8 push-effect hover:opacity-90" />
-            </Link>
-            <Link href={"https://www.pinterest.com/excelphotography"}>
-              <FaPinterest className="size-8 push-effect hover:opacity-90" />
-            </Link>
+            </a>
+            <a target="_blank" href={"https://wa.me//+2347018087954"}>
+              <FaSquareWhatsapp className="size-8 push-effect hover:opacity-90" />
+            </a>
           </div>
         </div>
         <ContactForm />
