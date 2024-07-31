@@ -1,0 +1,38 @@
+[
+  {
+    "photo": "/collection/portrait.webp",
+    "video": null,
+    "tag": "portraits",
+    "photo_size": [320, 392]
+  },
+  {
+    "photo": "/collection/maternity.webp",
+    "video": null,
+    "tag": "maternity",
+    "photo_size": [320, 392]
+  },
+  {
+    "photo": "/collection/event.webp",
+    "video": null,
+    "tag": "event",
+    "photo_size": [320, 392]
+  },
+  {
+    "photo": "/collection/product.webp",
+    "video": null,
+    "tag": "product",
+    "photo_size": [320, 392]
+  },
+  {
+    "photo": "/collection/birthday.webp",
+    "video": null,
+    "tag": "birthday",
+    "photo_size": [320, 392]
+  },
+  {
+    "photo": "/collection/wedding.webp",
+    "video": null,
+    "tag": "wedding",
+    "photo_size": [320, 392]
+  }
+]

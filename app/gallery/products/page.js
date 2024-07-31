@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import BookingButton from "@/components/BookingButton";
+import fetchCollection from "@/components/fetchCollection";
 
 export default function Page() {
   const [weddingImages, setWeddingImages] = useState([]);
@@ -9,20 +10,11 @@ export default function Page() {
 
   useEffect(() => {
     async function fetchImages() {
-      try {
-        const response = await fetch(
-          `https://app-07b991a0-e1c2-444c-930e-6b13cf0600d2.cleverapps.io/api/gallery/`
-        );
-        const data = await response.json();
-        const filteredImages = data.filter((item) => item.tag === "products");
-        setWeddingImages(filteredImages);
-      } catch (error) {
-        console.error("Error fetching images:", error);
-      } finally {
-        setIsLoading(false);
-      }
+      const data = await fetchCollection();
+      const filteredImages = data.filter((item) => item.tag === "products");
+      setWeddingImages(filteredImages);
+      setIsLoading(false);
     }
-
     fetchImages();
   }, []);
 
