@@ -79,7 +79,7 @@ export default function BookingForm({
   return (
     <div
       onClick={() => setShowForm(false)}
-      className="fixed inset-0 z-30 bg-black bg-opacity-50 flex justify-center items-center"
+      className="fixed text-black inset-0 z-30 bg-black bg-opacity-50 flex justify-center items-center"
     >
       <form
         onSubmit={handleSubmit}

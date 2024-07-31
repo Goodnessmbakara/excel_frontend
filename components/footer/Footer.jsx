@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <div className="w-[90%] max-w-[1440px] mx-auto lg:py-10 py-5 text-base font-medium">
       <div className="flex md:flex-row flex-col justify-between items-end gap-12">
-        <p className="lg:text-5xl text-3xl tracking-[-0.48px] lg:w-1/2 relative">
+        <p className="lg:text-5xl text-3xl tracking-[-0.48px] lg:w-1/2 relative z-10">
           Let&rsquo;s help you create visual stories that speak{" "}
           <br className="md:hidden block" />
           <Link

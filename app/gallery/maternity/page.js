@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import BookingButton from "@/components/BookingButton";
 
 export default function Page() {
   const [weddingImages, setWeddingImages] = useState([]);
@@ -36,23 +37,26 @@ export default function Page() {
   }
 
   return (
-    <div className="w-[90%] max-w-[1440px] py-8 mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {weddingImages.map((image, index) => (
-          <div
-            key={index}
-            className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg"
-          >
-            <Image
-              src={image.photo}
-              alt={`Wedding image ${index + 1}`}
-              width={image.photo_size[0]}
-              height={image.photo_size[1]}
-              className="hover:opacity-75 transition-opacity duration-300"
-            />
-          </div>
-        ))}
+    <div>
+      <div className="w-[90%] max-w-[1440px] min-h-[500px] py-8 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {weddingImages.map((image, index) => (
+            <div
+              key={index}
+              className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg"
+            >
+              <Image
+                src={image.photo}
+                alt={`Wedding image ${index + 1}`}
+                width={image.photo_size[0]}
+                height={image.photo_size[1]}
+                className="hover:opacity-75 transition-opacity duration-300"
+              />
+            </div>
+          ))}
+        </div>
       </div>
+      <BookingButton />
     </div>
   );
 }
