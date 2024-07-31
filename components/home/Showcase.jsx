@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import fetchCollection from "../fetchCollection";
 
 export default function Showcase() {
   const [images, setImages] = useState([]);
@@ -8,21 +9,13 @@ export default function Showcase() {
 
   useEffect(() => {
     async function fetchImages() {
-      try {
-        const response = await fetch(
-          `https://app-07b991a0-e1c2-444c-930e-6b13cf0600d2.cleverapps.io/api/gallery/`
-        );
-        const data = await response.json();
-        const uniqueTags = Array.from(new Set(data.map((item) => item.tag)));
-        const firstImagePerTag = uniqueTags.map((tag) =>
-          data.find((item) => item.tag === tag)
-        );
-        setImages(firstImagePerTag);
-      } catch (error) {
-        console.error("Error fetching images:", error);
-      } finally {
-        setIsLoading(false);
-      }
+      const data = await fetchCollection();
+      const uniqueTags = Array.from(new Set(data.map((item) => item.tag)));
+      const firstImagePerTag = uniqueTags.map((tag) =>
+        data.find((item) => item.tag === tag)
+      );
+      setImages(firstImagePerTag);
+      setIsLoading(false);
     }
 
     fetchImages();
