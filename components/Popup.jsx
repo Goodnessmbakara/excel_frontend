@@ -15,7 +15,7 @@ export default function Popup({ onClose, setShowPopup, headertext, text }) {
   return (
     <div
       onClick={onClose}
-      className="fixed inset-0 z-30 bg-black bg-opacity-50 flex justify-center items-center"
+      className="fixed inset-0 z-30 bg-black text-black bg-opacity-50 flex justify-center items-center"
     >
       <div
         className="w-[80%] max-w-3xl max-h-screen mx-auto text-center flex flex-col justify-center items-center md:py-36 py-16 md:px-44 px-1 border-[1px] border-black relative bg-white"

@@ -16,7 +16,7 @@ export default function BookingButton() {
       <div className="flex justify-end">
         <button
           onClick={handleBookingClick}
-          className="bg-black border-white border-[1px] text-white md:text-xl text-base rounded-full md:p-4 px-3 p-2 w-fit"
+          className="bg-black hover:opacity-95 push-effect border-white border-[1px] text-white md:text-xl text-base rounded-full md:p-4 px-3 p-2 w-fit"
         >
           BOOK US NOW
         </button>
