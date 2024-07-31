@@ -8,30 +8,40 @@ export default function BookingForm({
   setShowPopup,
 }) {
   const [formData, setFormData] = useState({
-    bookingType: `${bookingType}`,
-    fullname: "",
+    full_name: "",
     email: "",
     phone: "",
-    message: "",
-    fullDay: false,
-    multiEvent: false,
-    drone: false,
-    photoBooth: false,
-    videography: false,
+    additional_message: "",
+    selected_options: "",
+    booking_type: `${bookingType}`,
   });
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { id, value, type, checked } = e.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [id]: type === "checkbox" ? checked : value,
-    }));
+    if (type === "checkbox") {
+      const options = formData.selected_options.split(", ");
+      if (checked) {
+        options.push(id);
+      } else {
+        const index = options.indexOf(id);
+        if (index > -1) options.splice(index, 1);
+      }
+      setFormData((prevData) => ({
+        ...prevData,
+        selected_options: options.filter(Boolean).join(", "),
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [id]: value,
+      }));
+    }
   };
 
   const isFormValid = () => {
     return (
-      formData.fullname.trim() !== "" &&
+      formData.full_name.trim() !== "" &&
       formData.email.trim() !== "" &&
       formData.phone.trim() !== ""
     );
@@ -45,8 +55,7 @@ export default function BookingForm({
       setError("Please fill all required fields.");
       return;
     }
-
-    console.log("booking form data", formData);
+    console.log("Form data", formData);
 
     try {
       const response = await fetch(
@@ -58,7 +67,7 @@ export default function BookingForm({
             "X-CSRFTOKEN":
               "3u6hUACwwZvgrRnydD1PnfnnRUJTWdSqDQWrMiQrE0xqXlcPelDIIeLdDbtHL41C",
           },
-          body: JSON.stringify({ ...formData, bookingType }),
+          body: JSON.stringify(formData),
         }
       );
       if (response.ok) {
@@ -79,7 +88,7 @@ export default function BookingForm({
   return (
     <div
       onClick={() => setShowForm(false)}
-      className="fixed inset-0 z-30 bg-black bg-opacity-50 flex justify-center items-center"
+      className="fixed text-black inset-0 z-30 bg-black bg-opacity-50 flex justify-center items-center"
     >
       <form
         onSubmit={handleSubmit}
@@ -98,60 +107,70 @@ export default function BookingForm({
             <div className="flex items-center gap-2">
               <input
                 type="checkbox"
-                id="fullDay"
-                checked={formData.fullDay}
+                id="Full-Day Coverage"
+                checked={formData.selected_options.includes(
+                  "Full-Day Coverage"
+                )}
                 onChange={handleChange}
                 className="accent-black rounded-sm size-[18px] cursor-pointer"
               />
-              <label htmlFor="fullDay" className="text-base font-normal">
+              <label
+                htmlFor="Full-Day Coverage"
+                className="text-base font-normal"
+              >
                 Full-Day Coverage
               </label>
             </div>
             <div className="flex items-center gap-2">
               <input
                 type="checkbox"
-                id="multiEvent"
-                checked={formData.multiEvent}
+                id="Multi-Event Coverage"
+                checked={formData.selected_options.includes(
+                  "Multi-Event Coverage"
+                )}
                 onChange={handleChange}
                 className="accent-black rounded-sm size-[18px] cursor-pointer"
               />
-              <label htmlFor="multiEvent" className="text-base font-normal">
+              <label
+                htmlFor="Multi-Event Coverage"
+                className="text-base font-normal"
+              >
                 Multi-Event Coverage
               </label>
             </div>
             <div className="flex items-center gap-2">
               <input
                 type="checkbox"
-                id="drone"
-                checked={formData.drone}
+                id="Drone services"
+                checked={formData.selected_options.includes("Drone services")}
                 onChange={handleChange}
                 className="accent-black rounded-sm size-[18px] cursor-pointer"
               />
-              <label htmlFor="drone" className="text-base font-normal">
+              <label htmlFor="Drone services" className="text-base font-normal">
                 Drone services
               </label>
             </div>
             <div className="flex items-center gap-2">
               <input
                 type="checkbox"
-                id="photoBooth"
-                checked={formData.photoBooth}
+                id="Photo Booth"
+                checked={formData.selected_options.includes("Photo Booth")}
                 onChange={handleChange}
                 className="accent-black rounded-sm size-[18px] cursor-pointer"
               />
-              <label htmlFor="photoBooth" className="text-base font-normal">
+              <label htmlFor="Photo Booth" className="text-base font-normal">
                 Photo Booth
               </label>
             </div>
             <div className="flex items-center gap-2">
               <input
                 type="checkbox"
-                id="videography"
-                checked={formData.videography}
+                id="Videography"
+                checked={formData.selected_options.includes("Videography")}
                 onChange={handleChange}
                 className="accent-black rounded-sm size-[18px] cursor-pointer"
               />
-              <label htmlFor="videography" className="text-base font-normal">
+              <label htmlFor="Videography" className="text-base font-normal">
                 Videography
               </label>
             </div>
@@ -162,13 +181,13 @@ export default function BookingForm({
         </div>
         <div className="flex flex-col gap-8 bg-[#F4F4F4] py-9 px-8">
           <div>
-            <label htmlFor="fullname" className="font-normal text-base">
-              Fullname
+            <label htmlFor="full_name" className="font-normal text-base">
+              Full Name
             </label>
             <input
               type="text"
-              id="fullname"
-              value={formData.fullname}
+              id="full_name"
+              value={formData.full_name}
               onChange={handleChange}
               className="w-full h-6 border-b-[1px] border-b-black bg-[#F4F4F4] outline-none"
               required
@@ -201,12 +220,15 @@ export default function BookingForm({
             />
           </div>
           <div>
-            <label htmlFor="message" className="font-normal text-base">
+            <label
+              htmlFor="additional_message"
+              className="font-normal text-base"
+            >
               Additional message
             </label>
             <textarea
-              id="message"
-              value={formData.message}
+              id="additional_message"
+              value={formData.additional_message}
               onChange={handleChange}
               rows={5}
               className="w-full h-8 border-b-[1px] border-b-black bg-[#F4F4F4] outline-none"

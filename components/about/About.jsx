@@ -28,8 +28,8 @@ export default function About() {
         />
       </div>
       <Story />
-      <Values />
       <Team />
+      <Values />
     </div>
   );
 }
