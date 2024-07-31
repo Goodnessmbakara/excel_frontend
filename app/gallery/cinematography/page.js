@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import BookingButton from "@/components/BookingButton";
+import fetchCollection from "@/components/fetchCollection";
 
 export default function Page() {
   const [weddingImages, setWeddingImages] = useState([]);
