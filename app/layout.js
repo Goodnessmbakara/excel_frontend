@@ -34,8 +34,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${raleway.variable} ${montserrat.variable}`}>
-      <body className={`bg-white text-black font-montserrat`}>
+    <html lang="en">
+      <body
+        className={`bg-white text-black ${raleway.variable} ${montserrat.variable}`}
+      >
         <Header />
         {children}
         <Footer />
