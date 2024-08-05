@@ -14,7 +14,7 @@ export default function Header() {
     <div className="sticky top-0 bg-white z-30">
       <div className="relative ">
         <div className="w-[90%] mx-auto max-w-[1440px] border-b-[1px]  md:py-4 py-3 ">
-          <div className="flex justify-between items-center uppercase">
+          <div className="flex justify-between items-center uppercase font-raleway">
             <Link href={"/"}>
               <Image
                 src={"/images/logo.png"}

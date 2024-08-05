@@ -1,6 +1,18 @@
 import Header from "@/components/header/Header";
 import "./globals.css";
 import Footer from "@/components/footer/Footer";
+import { Raleway, Montserrat } from "next/font/google";
+
+const raleway = Raleway({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-ralaway",
+});
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
 
 export const metadata = {
   title: "Excel Imagary",
@@ -23,7 +35,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-white text-black">
+      <body
+        className={`bg-white text-black ${raleway.variable} ${montserrat.variable}`}
+      >
         <Header />
         {children}
         <Footer />

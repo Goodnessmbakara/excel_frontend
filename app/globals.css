@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: "Helvetica Neue", sans-serif;
-}
-
 .scrollbar-hide {
   scrollbar-width: none;
   -ms-overflow-style: none;

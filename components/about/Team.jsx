@@ -9,7 +9,9 @@ export default function Team() {
   useEffect(() => {
     async function fetchTeamMembers() {
       try {
-        const response = await fetch("/ourteam/ourteam.json");
+        const response = await fetch(
+          "https://app-07b991a0-e1c2-444c-930e-6b13cf0600d2.cleverapps.io/api/our-team/"
+        );
         const data = await response.json();
         setTeamMembers(data);
       } catch (error) {
