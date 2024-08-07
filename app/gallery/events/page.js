@@ -11,7 +11,7 @@ export default function Page() {
   useEffect(() => {
     async function fetchImages() {
       const data = await fetchCollection();
-      const filteredImages = data.filter((item) => item.tag === "events");
+      const filteredImages = data.filter((item) => item.tag === "event");
       setWeddingImages(filteredImages);
       setIsLoading(false);
     }
